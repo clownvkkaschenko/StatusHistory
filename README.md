@@ -6,7 +6,7 @@
 </div>
 
 # Документация API
-[clownvkkaschenko.github.io/StatusHistory]([https://kaschenko.pythonanywhere.com/api/docs/](https://clownvkkaschenko.github.io/StatusHistory/))
+[clownvkkaschenko.github.io/StatusHistory](https://clownvkkaschenko.github.io/StatusHistory/)
 
 # Описание проекта:
 Есть несколько рабочих сервисов, у каждого сервиса есть состояние работает/не работает/работает нестабильно.
