@@ -5,6 +5,8 @@
   <img src="https://img.shields.io/badge/DjangoRestFramework-3.14.0-F8F8FF?style=for-the-badge&logo=django&logoColor=00FF00">
 </div>
 
+# Документация API
+[clownvkkaschenko.github.io/StatusHistory]([https://kaschenko.pythonanywhere.com/api/docs/](https://clownvkkaschenko.github.io/StatusHistory/))
 
 # Описание проекта:
 Есть несколько рабочих сервисов, у каждого сервиса есть состояние работает/не работает/работает нестабильно.
