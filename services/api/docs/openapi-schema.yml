@@ -77,6 +77,7 @@ paths:
         - История работы сервиса
   /api/{service_id}/{start_date}/{end_date}/:
     get:
+      operationId: Расчёт SLA
       description: 'Информация о том сколько не работал сервис и расчёт SLA.'
       parameters:
         - name: service_id
@@ -118,7 +119,7 @@ paths:
                   Общее время недоступности сервиса:
                     type: string
                     description: 'Общее время недоступности'
-                    example: '0 месяцев, 10 часов, 12 минут, 31 секунд'
+                    example: '0 месяцев, 1 дней, 10 часов, 12 минут, 31 секунд'
           description: ''
       tags:
         - Service level agreement

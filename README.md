@@ -26,18 +26,22 @@
 
 # Запуск проекта:
 - Клонируйте репозиторий и перейдите в него.
-- Установите и активируйте виртуальное окружение.
-- Установите зависимости из файла requirements.txt
-    ```
-    python -m pip install --upgrade pip
-    pip install -r requirements.txt
-    ``` 
-- Перейдите в папку **services** с файлом **manage.py**, выполните миграции, и запустите сервер:
-    ```
-    python manage.py migrate
-    python manage.py runserver
-    ```
+- Перейдите в папку **infra** и проверьте, что файл .env заполнен данными представленными ниже:
+  ```
+  DEBUG=True
+  ALLOWED_HOSTS=127.0.0.1
+  ```
+- Из папки **infra** запустите docker-compose
+  ```
+  ~$ docker-compose up -d --build
+  ```
+- В контейнере web выполните миграции, создайте суперпользователя и соберите статику.
+  ```
+  ~$ docker-compose exec web python manage.py migrate
+  ~$ docker-compose exec web python manage.py createsuperuser
+  ~$ docker-compose exec web python manage.py collectstatic --no-input
+  ```
 
-После этого проект будет доступен по url-адресу [127.0.0.1:8000/api/](http://127.0.0.1:8000/api/)
+После этого API проекта будет доступно по url-адресу [127.0.0.1/api/](http://127.0.0.1/api/)
 
-Документация к API будет доступна по url-адресу [127.0.0.1:8000/api/docs](http://127.0.0.1:8000/api/docs/)
+Документация к API будет доступна по url-адресу [127.0.0.1/api/docs](http://127.0.0.1/api/docs/)

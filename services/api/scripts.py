@@ -20,6 +20,6 @@ def seconds_to_time(seconds: str) -> str:
     seconds -= minutes * seconds_in_minute
 
     result = (
-        f'{months} месяцев, {hours} часов, {minutes} минут, '
-        f'{seconds} секунд')
+        f'{months} месяцев, {hours} часов, {days} дней '
+        f'{minutes} минут, {seconds} секунд')
     return result
